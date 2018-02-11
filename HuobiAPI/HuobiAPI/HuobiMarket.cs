@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HuobiAPI.Helpers;
 using WebSocket4Net;
 
 namespace HuobiAPI
@@ -12,8 +13,8 @@ namespace HuobiAPI
         #region 私有属性
         private static WebSocket websocket;
         private static Dictionary<string, string> topicDic = new Dictionary<string, string>();
-        private static bool isOpened = false;
-        private const string HUOBI_WEBSOCKET_API = "ws://api.huobi.pro/ws";
+        private static bool isOpened = true;
+        private const string HUOBI_WEBSOCKET_API = "ws://121.40.165.18:8088";
         #endregion
         #region  市场信息常量
         public const string MARKET_KLINE = "market.{0}.kline.{1}";
